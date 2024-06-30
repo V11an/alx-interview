@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+"""Pascal Triangle Interview Challenge"""
+
 def pascal_triangle(n):
   """
   This function generates the first n rows of Pascal's triangle.
