@@ -2,16 +2,6 @@
 """Pascal Triangle Interview Challenge"""
 
 def pascal_triangle(n):
-  """
-  This function generates the first n rows of Pascal's triangle.
-
-  Args:
-      n: An integer representing the number of rows.
-
-  Returns:
-      A list of lists representing the Pascal's triangle of size n.
-      Returns an empty list if n <= 0.
-  """
 
   if n <= 0:
     return []  # Handle edge case: return empty list for n <= 0
