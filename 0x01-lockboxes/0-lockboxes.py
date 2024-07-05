@@ -2,35 +2,34 @@
 '''LockBoxes Challenge'''
 
 def canUnlockAll(boxes):
-  """
-  Checks if all the boxes can be opened using the keys provided.
+    """
+    Checks if all the boxes can be opened using the keys provided.
 
-  Args:
-      boxes: A list of lists, where each inner list represents the keys found in a box.
+    Args:
+    boxes: A list of lists, where each list represents keys found in a box.
 
-  Returns:
-      True if all boxes can be opened, False otherwise.
-  """
+    Returns:
+    True if all boxes can be opened, False otherwise.
+    """
 
-  N = len(boxes)
-  opened = [False] * N
+    N = len(boxes)
+    opened = [False] * N
 
-  opened[0] = True
+    opened[0] = True
 
-  while True:
-    opened_something = False
+    while True:
+        opened_something = False
 
-    for i in range(N):
-      if opened[i] or not boxes[i]:
-        continue
+        for i in range(N):
+            if opened[i] or not boxes[i]:
+                continue
 
-      for key in boxes[i]:
-        if not opened[key]:
-          opened[key] = True
-          opened_something = True
-          break
+            for key in boxes[i]:
+                if not opened[key]:
+                    opened[key] = True
+                    opened_something = True
+                break
+            if not opened_something:
+                break
 
-    if not opened_something:
-      break
-
-  return all(opened)
+    return all(opened)
